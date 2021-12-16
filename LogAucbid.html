@@ -1,0 +1,64 @@
+<!DOCTYPE html>    
+<html>    
+<head>    
+    <title>Login Page</title>    
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">    
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+.example {
+  padding: 20px;
+  color: white;
+}
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .example {background: red;}
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .example {background: green;}
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .example {background: blue;}
+} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .example {background: orange;}
+} 
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .example {background: pink;}
+}
+</style>
+</head>    
+<body>    
+    <h2><b>Vehicle Bidding System</b></h2><br>    
+   <marquee behavior=alternate>
+    <h3>Login with eticket code!</h3>
+</marquee>
+    <div class="login">    
+    <form id="login" method="get" action="auction.html">    
+        <label><b>Customer ID
+        </b>    
+        </label>    
+        <input type="text" name="Uname" id="Uname" placeholder="Customer ID">    
+        <br><br>    
+        <label><b>Eticket
+        </b>    
+        </label>    
+        <input type="Password" name="Pass" id="Pass" placeholder="Eticket">    
+        <br><br>    
+        <input type="button" name="log" id="log" value="Log In Here">       
+        <br><br>    
+        <input type="checkbox" id="check">    
+        <span>Remember me</span>    
+        <br><br>    
+        Forgot <a href="#">Eticket</a>    
+    </form>     
+</div>    
+</body>    
+</html>   
