@@ -1,0 +1,63 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Auctio1">
+  
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Seller" maxOccurs="unbounded" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="Name"/>
+              <xs:element type="Ph" name="Phonenum"/>
+              <xs:element type="xs:string" name="Emailid"/>
+              <xs:element type="xs:string" name="Username"/>
+              <xs:element type="xs:byte" name="No_of_Items"/>
+              <xs:element type="xs:string" name="Seller_ID"/>
+              <xs:element type="xs:string" name="SelType"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Item" maxOccurs="unbounded" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="I_name"/>
+              <xs:element type="xs:byte" name="I_id"/>
+              <xs:element type="xs:string" name="Sel_ID"/>
+              <xs:element type="xs:string" name="Brand"/>
+              <xs:element type="xs:int" name="Min_Price"/>
+              <xs:element type="xs:int" name="Min_inc"/>
+              <xs:element type="xs:string" name="Category"/>
+              <xs:element type="xs:string" name="Auction_no"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Auction" maxOccurs="unbounded" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="Auction_no"/>
+              <xs:element type="xs:date" name="Date"/>
+              <xs:element type="xs:string" name="Duration"/>
+              <xs:element type="xs:string" name="Auc_Categ"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Buyer" maxOccurs="unbounded" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="Name"/>
+              <xs:element type="Ph" name="Phonenum"/>
+              <xs:element type="xs:string" name="Emailid"/>
+              <xs:element type="xs:string" name="Username"/>
+              <xs:element type="xs:string" name="B_id"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:simpleType name="Ph">
+        <xs:restriction base="xs:string">
+         <xs:pattern value="[0-9]{10}"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+</xs:schema>
