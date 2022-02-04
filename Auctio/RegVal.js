@@ -30,7 +30,7 @@ function valAll() {
             +"email="+email.value+";"
             +"phone="+phNum.value+";"
             +"password="+psw.value+";"
-            +" expires=Thu, 10 Feb 2022 12:00:00 UTC";
+            +" expires=Fri, 18 Feb 2022 12:00:00 UTC";
 
             cname = document.cookies.split(";")[0].split("=")[1];
             cemail = document.cookies.split(";")[1].split("=")[1];
