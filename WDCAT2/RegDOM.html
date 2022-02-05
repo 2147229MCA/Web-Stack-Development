@@ -1,0 +1,91 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration DOM services</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cardo&family=Exo:wght@600;700&family=Lobster&family=Merriweather:wght@700&family=Oswald&family=Rubik&family=Ubuntu:wght@400;500&display=swap" rel="stylesheet">    <link href="https://fonts.googleapis.com/css2?family=Cardo&family=Merriweather:wght@700&family=Oswald&family=Rubik&family=Ubuntu:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@700&family=Cardo&family=Exo:wght@600;700&family=Lobster&family=Merriweather:wght@700&family=Oswald&family=Righteous&family=Secular+One&family=Ubuntu:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Rdom.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="menu">
+            <h3>TECHNOVID</h3>
+            <button id="showbtn" class="btns">Show</button>
+            
+            <button id="backbtn" class="btns"><a href="Regis.html">Back</a></button>
+        </div>
+
+        <div class="maincontent">
+            <h1>Gateways 2022 Student List</h1>
+            <table id="tbl"></table>
+        </div>
+
+        
+    </div>
+</body>
+
+<script>
+    //////////////////  xmlhttp request  //////////////////////////////
+    if (window.XMLHttpRequest)
+    {
+        xmlhttp=new XMLHttpRequest();  
+    }  
+    else
+    {
+        xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");  
+    }  
+
+    xmlhttp.open("GET","Reg.xml",false);  
+    xmlhttp.send(); 
+    xmlDoc=xmlhttp.responseXML; 
+
+    //////////////////  Button event listeners  ///////////////////////
+    document.getElementById("showbtn").addEventListener("click",shown);
+    
+
+    //////////////////  shown function  ///////////////////////////////
+    function shown()
+    {
+        console.log("Hi this is shown function")
+        var x = xmlDoc.getElementsByTagName("COMPUTER-SCIENCE");
+        var table = `<tr>
+                        <th>STU-NAME</th>
+                        <th>STU-UNIVERSITY</th>
+                        <th>STU-PHONE</th>
+                        <th>Phonenum</th>
+                        <th>STU-EMAIL</th>
+                        
+                    </tr>`;
+        
+
+        for (i = 0; i < x.length; i++) {
+            table += "<tr><td>" +
+                x[i].getElementsByTagName("STU-NAME")[0]
+                .childNodes[0].nodeValue + "</td><td>" +
+                x[i].getElementsByTagName("STU-UNIVERSITY")[0]
+                .childNodes[0].nodeValue + "</td><td>" +
+                x[i].getElementsByTagName("STU-PHONE")[0]
+                .childNodes[0].nodeValue + "</td><td>" +
+                x[i].getElementsByTagName("Phonenum")[0]
+                .childNodes[0].nodeValue + "</td><td>" +
+                x[i].getElementsByTagName("STU-EMAIL")[0]
+                .childNodes[0].nodeValue + "</td><td>" ;
+        }
+
+        // Print the xml data in table form
+        document.getElementById("tbl").innerHTML = table;
+    }
+
+    
+    
+    
+
+</script>
+</html>
