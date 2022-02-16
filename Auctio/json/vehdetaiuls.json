@@ -1,0 +1,49 @@
+{
+    "cars": [
+        {
+            "SL_No": 1,
+            "Veh_Id": "1A",
+            "Veh_brand": "MAN",
+    
+            "Veh_Colour": "WHITE",
+            "Veh_price": "10000000",
+            "min_increment": "100000"
+        },
+        {
+            "SL_No": 2,
+            "Veh_Id": "2V",
+            "Veh_brand": "SCANIA",
+           
+            "Veh_Colour": "VIOLET",
+            "Veh_price": "156000000",
+            "min_increment": "50000"
+        },
+        {
+            "SL_No": 3,
+            "Veh_Id": "3D",
+            "Veh_brand": "EICHER",
+      
+            "Veh_Colour": "RED",
+            "Veh_price": "80000000",
+            "min_increment": "45000"
+        },
+        {
+            "SL_No": 4,
+            "Veh_Id": "4D",
+            "Veh_brand": "TATA",
+           
+            "Veh_Colour": "BLUE",
+            "Veh_price": "76000000",
+            "min_increment": "200000"
+        },
+        {
+            "SL_No": 5,
+            "Veh_Id": "5P",
+            "Veh_brand": "ASHOK LEY.",
+
+            "Veh_Colour": "BLACK",
+            "Veh_price": "46000000",
+            "min_increment": "100000"
+        }
+    ]
+}
