@@ -1,0 +1,214 @@
+{
+    "Vehicles": [
+        {
+            "V_id": 1,
+            "reg_no": "KA01HQ7767",
+            "carmake": "Hyundai",
+            "model": "Verna",
+            "type": "sedan",
+            "fueltype": "petrol",
+            "purchase_year": "2020-01-14",
+            "past_services": 2
+        },
+        {
+            "V_id": 2,
+            "reg_no": "KA02HH8989",
+            "carmake": "Hyundai",
+            "model": "Venue",
+            "type": "SUV",
+            "fueltype": "diesel",
+            "purchase_year": "2011-06-14",
+            "past_services": 9
+        },
+        {
+            "V_id": 3,
+            "reg_no": "TN24BT9080",
+            "carmake": "KIA",
+            "model": "Seltos",
+            "type": "SUV",
+            "fueltype": "petrol",
+            "purchase_year": "2019-11-24",
+            "past_services": 1
+        },
+        {
+            "V_id": 4,
+            "reg_no": "MH02KK2384",
+            "carmake": "Hyundai",
+            "model": "Creta",
+            "type": "SUV",
+            "fueltype": "diesel",
+            "purchase_year": "2016-12-24",
+            "past_services": 6
+        },
+        {
+            "V_id": 5,
+            "reg_no": "KA05AB0012",
+            "carmake": "Skoda",
+            "model": "Rapid",
+            "type": "sedan",
+            "fueltype": "diesel",
+            "purchase_year": "2015-11-04",
+            "past_services": 4
+        },
+        {
+            "V_id": 6,
+            "reg_no": "KA02CG8900",
+            "carmake": "Hyundai",
+            "model": "i20",
+            "type": "hatchback",
+            "fueltype": "petrol",
+            "purchase_year": "2013-06-24",
+            "past_services": 10
+        },
+        {
+            "V_id": 7,
+            "reg_no": "KA54AB6008",
+            "carmake": "Jaguar",
+            "model": "ftype",
+            "type": "superacar",
+            "fueltype": "petrol",
+            "purchase_year": "2021-08-04",
+            "past_services": 1
+        },
+        {
+            "V_id": 8,
+            "reg_no": "TN01VG7809",
+            "carmake": "Tata",
+            "model": "Tiago",
+            "type": "hatchback",
+            "fueltype": "petrol",
+            "purchase_year": "2019-09-04",
+            "past_services": 3
+        },
+        {
+            "V_id": 9,
+            "reg_no": "MH20LU0087",
+            "carmake": "Mahindra",
+            "model": "XUV300",
+            "type": "SUV",
+            "fueltype": "diesel",
+            "purchase_year": "2018-05-04",
+            "past_services": 3
+        },
+        {
+            "V_id": 10,
+            "reg_no": "KA03BY7888",
+            "carmake": "Maruthi Suzuki",
+            "model": "Breza",
+            "type": "SUV",
+            "fueltype": "petrol",
+            "purchase_year": "2015-02-04",
+            "past_services": 13
+        },
+        {
+            "V_id": 11,
+            "reg_no": "KA90HJ8989",
+            "carmake": "Tata",
+            "model": "Tigor",
+            "type": "sedan",
+            "fueltype": "petrol",
+            "purchase_year": "2018-08-02",
+            "past_services": 6
+        },
+        {
+            "V_id": 12,
+            "reg_no": "KA78BH4567",
+            "carmake": "Audi",
+            "model": "R8",
+            "type": "supercar",
+            "fueltype": "petrol",
+            "purchase_year": "2020-09-09",
+            "past_services": 1
+        },
+        {
+            "V_id": 13,
+            "reg_no": "KA12BY4213",
+            "carmake": "Maruthi Suzuki",
+            "model": "Swift",
+            "type": "hatchback",
+            "fueltype": "petrol",
+            "purchase_year": "2017-03-04",
+            "past_services": 3
+        },
+        {
+            "V_id": 14,
+            "reg_no": "KA01BB3346",
+            "carmake": "Maruthi Suzuki",
+            "model": "Baleno",
+            "type": "hatchback",
+            "fueltype": "diesel",
+            "purchase_year": "2018-08-03",
+            "past_services": 2
+        },
+        {
+            "V_id": 15,
+            "reg_no": "TN02BB0909",
+            "carmake": "Tata",
+            "model": "Altroz",
+            "type": "Hatchback",
+            "fueltype": "petrol",
+            "purchase_year": "2016-08-31",
+            "past_services": 3
+        },
+        {
+            "V_id": 16,
+            "reg_no": "KA01CC8900",
+            "carmake": "BMW",
+            "model": "3series",
+            "type": "sedan",
+            "fueltype": "petrol",
+            "purchase_year": "2019-05-17",
+            "past_services": 1
+        },
+        {
+            "V_id": 17,
+            "reg_no": "KA09KS8988",
+            "carmake": "Tata",
+            "model": "Tiago",
+            "type": "hatchback",
+            "fueltype": "diesel",
+            "purchase_year": "2020-12-04",
+            "past_services": 1
+        },
+        {
+            "V_id": 18,
+            "reg_no": "KA01HQ7778",
+            "carmake": "Hyundai",
+            "model": "Verna",
+            "type": "hatchback",
+            "fueltype": "petrol",
+            "purchase_year": "2021-01-14",
+            "past_services": 5
+        },
+        {
+            "V_id": "21",
+            "reg_no": "",
+            "carmake": "",
+            "model": "",
+            "type": "",
+            "fueltype": "",
+            "purchase_year": "",
+            "past_services": ""
+        },
+        {
+            "V_id": "yer",
+            "reg_no": "rjtgt4;",
+            "carmake": "ttrg",
+            "model": "thyy",
+            "type": "yjj",
+            "fueltype": "ujhh",
+            "purchase_year": "5555",
+            "past_services": "nnnn"
+        },
+        {
+            "V_id": "yer",
+            "reg_no": "rjtgt4",
+            "carmake": "ttrg",
+            "model": "thyy",
+            "type": "yjj",
+            "fueltype": "ujhh",
+            "purchase_year": "5555",
+            "past_services": "nnnn"
+        }
+    ]
+}
