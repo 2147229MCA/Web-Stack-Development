@@ -1,0 +1,241 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auction DOM services</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cardo&family=Exo:wght@600;700&family=Lobster&family=Merriweather:wght@700&family=Oswald&family=Rubik&family=Ubuntu:wght@400;500&display=swap" rel="stylesheet">    <link href="https://fonts.googleapis.com/css2?family=Cardo&family=Merriweather:wght@700&family=Oswald&family=Rubik&family=Ubuntu:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@700&family=Cardo&family=Exo:wght@600;700&family=Lobster&family=Merriweather:wght@700&family=Oswald&family=Righteous&family=Secular+One&family=Ubuntu:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Adom.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="menu">
+            <h3>LUXUS AU</h3>
+            <button id="showbtn" class="btns">Show</button>
+            <button id="addbtn" class="btns">Add</button>
+            <button id="quickdelbtn" class="btns">Quick delete</button>
+            <button id="delbtn" class="btns">Delete</button>
+            <button id="changebtn" class="btns">Change</button>
+            <button id="refreshbtn" class="btns">Refresh</button>
+            <button id="backbtn" class="btns"><a href="index.html">Back</a></button>
+        </div>
+
+        <div class="maincontent">
+            <h1>Seller List</h1>
+            <table id="tbl"></table>
+        </div>
+
+        <div id="overlayform" class="overlay">
+            <span id="clsbtn1"class="clsbtn" >&#215</span>
+            <div class="wrap">
+                <h3>Enter the new details</h3>
+                <form id="xmlform" class="jsform" onsubmit="return false">          
+                    <input type="text" id="sellid" placeholder="Enter the Seller Id!">
+                    <input type="text" id="nameid" placeholder="Enter the Seller Name">
+                    <input type="text" id="Emailid" placeholder="Enter the Email">
+                    <input type="text" id="phid" placeholder="Enter the Phone Number">
+                    <input type="text" id="userid" placeholder="Enter the Username">
+                    <input type="text" id="icountid" placeholder="Enter the no. of items">
+                    <input type="text" id="Seltypeid" placeholder="Enter the Seller Type"-->
+        
+                    <button id="submitbtn"class="frmbtn">SUBMIT</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    //////////////////  xmlhttp request  //////////////////////////////
+    if (window.XMLHttpRequest)
+    {
+        xmlhttp=new XMLHttpRequest();  
+    }  
+    else
+    {
+        xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");  
+    }  
+
+    xmlhttp.open("GET","Auctio1.xml",false);  
+    xmlhttp.send(); 
+    xmlDoc=xmlhttp.responseXML; 
+
+    //////////////////  Button event listeners  ///////////////////////
+    document.getElementById("showbtn").addEventListener("click",shown);
+    document.getElementById("delbtn").addEventListener("click",deln);
+    document.getElementById("quickdelbtn").addEventListener("click",quickdeln);
+    document.getElementById("changebtn").addEventListener("click",changen);
+    document.getElementById("addbtn").addEventListener("click",displayol);
+    document.getElementById("clsbtn1").addEventListener("click",hideol);
+    document.getElementById("submitbtn").addEventListener("click",addnewele);
+
+    //////////////////  shown function  ///////////////////////////////
+    function shown()
+    {
+        console.log("Hi this is shown function")
+        var x = xmlDoc.getElementsByTagName("Seller");
+        var table = `<tr>
+                        <th>Seller_ID</th>
+                        <th>Name</th>
+                        <th>Emailid</th>
+                        <th>Phonenum</th>
+                        <th>Username</th>
+                        <th>No_of_Items</th>
+                        <th>SelType</th>
+                    </tr>`;
+        
+
+        for (i = 0; i < x.length; i++) {
+            table += "<tr><td>" +
+                x[i].getElementsByTagName("Seller_ID")[0]
+                .childNodes[0].nodeValue + "</td><td>" +
+                x[i].getElementsByTagName("Name")[0]
+                .childNodes[0].nodeValue + "</td><td>" +
+                x[i].getElementsByTagName("Emailid")[0]
+                .childNodes[0].nodeValue + "</td><td>" +
+                x[i].getElementsByTagName("Phonenum")[0]
+                .childNodes[0].nodeValue + "</td><td>" +
+                x[i].getElementsByTagName("Username")[0]
+                .childNodes[0].nodeValue + "</td><td>" +
+                x[i].getElementsByTagName("No_of_Items")[0]
+                .childNodes[0].nodeValue + "</td><td>" +
+                x[i].getElementsByTagName("SelType")[0]
+                .childNodes[0].nodeValue + "</td></tr>";
+        }
+
+        // Print the xml data in table form
+        document.getElementById("tbl").innerHTML = table;
+    }
+
+    //////////////////  Delete function  //////////////////////////////
+    function quickdeln(){
+        y = xmlDoc.getElementsByTagName("Seller")[0];
+        xmlDoc.documentElement.removeChild(y);
+        alert("The Node 'Services' has been deleted!");
+        shown();
+    }
+    
+    //////////////////  Quick delete function  ////////////////////////
+    function deln()
+        {   
+            var x = xmlDoc.getElementsByTagName("Seller");
+            var nno = parseInt(window.prompt("Enter the node number to delete! "));
+            nno = nno-1;
+
+            console.log(x.length)
+            console.log(nno, typeof(nno))
+            if (nno<x.length){
+                y = xmlDoc.getElementsByTagName("Seller")[nno];
+                xmlDoc.documentElement.removeChild(y);
+                alert("The Node Services has been deleted!");
+                shown();
+            }
+            else{
+                alert("The node number you entered is invalid!");
+            }
+        }
+
+    ///////////  Form over to add new element functions    ///////////////////////
+    function displayol(){
+        console.log("show overlay btn")
+        document.getElementById("overlayform").style.display = "block";
+    }
+
+    function hideol(){
+        console.log("close overlay btn")
+        document.getElementById("overlayform").style.display = "none";
+    }
+
+    ////////// Add new ELEMENT to the XML doc  ////////////////////////////////////
+    function addnewele(){
+        
+        console.log("add new element");
+        var sname = document.getElementById("sellid").value;
+        var scost =document.getElementById("nameid").value;
+        var sdur = document.getElementById("Emailid").value;
+        var sveh = parseInt(document.getElementById("phid").value);
+        var savail = document.getElementById("userid").value;
+        var scounts = parseInt(document.getElementById("icountid").value);
+        var sincharge = document.getElementById("Seltypeid").value;
+
+
+        newElement = xmlDoc.createElement("Seller");
+        x = xmlDoc.getElementsByTagName("Auctio1")[0]
+
+        newsname = xmlDoc.createElement("Seller_ID");
+        newsnametxt = xmlDoc.createTextNode(sname);
+        newsname.appendChild(newsnametxt);
+        newElement.appendChild(newsname);
+
+        newcost = xmlDoc.createElement("Name");
+        newcosttxt = xmlDoc.createTextNode(scost);
+        newcost.appendChild(newcosttxt);
+        newElement.appendChild(newcost);
+
+        newdur = xmlDoc.createElement("Emailid");
+        newdurtxt = xmlDoc.createTextNode(sdur);
+        newdur.appendChild(newdurtxt);
+        newElement.appendChild(newdur);
+
+        newveh = xmlDoc.createElement("Phonenum");
+        newvehtxt = xmlDoc.createTextNode(sveh);
+        newveh.appendChild(newvehtxt);
+        newElement.appendChild(newveh);
+
+        newavail = xmlDoc.createElement("Username");
+        newsavailtxt = xmlDoc.createTextNode(savail);
+        newavail.appendChild(newsavailtxt);
+        newElement.appendChild(newavail);
+
+        newcounts = xmlDoc.createElement("No_of_Items");
+        newcountstxt = xmlDoc.createTextNode(scounts);
+        newcounts.appendChild(newcountstxt);
+        newElement.appendChild(newcounts);
+
+        newincharge = xmlDoc.createElement("SelType");
+        newinchargetxt = xmlDoc.createTextNode(sincharge);
+        newincharge.appendChild(newinchargetxt);
+        newElement.appendChild(newincharge);
+
+
+        x.appendChild(newElement);
+
+        x = xmlDoc.getElementsByTagName("Seller");
+        xLen = x.length;
+
+        document.getElementById("xmlform").reset();
+        console.log(x)
+        console.log(xLen)
+
+        shown();
+        hideol();
+    }
+
+    //////////////////// Change the values /////////////////////////////
+    function changen(){
+        console.log("Change node value");
+        var x = xmlDoc.getElementsByTagName("Seller");
+        var nodeno = parseInt(window.prompt("Enter The node Number, whose cost You want to change!"));
+        console.log(nodeno)
+        if(nodeno>x.length || nodeno=="")
+        {
+            alert("The node number is invalid!");
+        }
+        else
+        {
+            var newcost = parseInt(window.prompt("Enter the new no. of item"));
+            x = xmlDoc.getElementsByTagName("No_of_Items")[nodeno-1].childNodes[0];    
+            x.nodeValue = newcost;
+        }
+    
+        shown();
+    }
+
+</script>
+</html>

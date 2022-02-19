@@ -1,0 +1,302 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="Reg.css">
+    <title>Auction Profile</title>
+    <style>body{background-size: cover;background-repeat: no-repeat;}</style>
+</head>
+<body onload="myfunction()">
+
+   
+
+    <div class="container">
+        <div class="header" id="headerid">
+            <h1 id="hid">Your Profile Page</h1>
+        </div>
+        <form class="mainform">
+
+            <div class="input-control">
+                <label for="nameid">Name</label>
+                <input type="text" id="nameid">
+            </div>
+
+            <div class="input-control">
+                <label for="emailid">Email</label>
+                <input type="text" id="emailid">
+            </div>
+
+            <div class="input-control">
+                <label for="mobileid">mobile</label>
+                <input type="text" id="mobileid">
+            </div>
+
+            <div class="input-control">
+                <label for="colorid">color</label>
+                <input type="color" id="colorid">
+            </div>
+
+            <div class="radio-control">
+
+                <div class="radio1">
+                    <label for="bgid1"><img id="bg1" src="4-Essentia.jpg" width="100px" alt=""></label>
+                    <input type="radio" name="bgimg" id="bgid1">
+                </div>
+
+                <div class="radio1">
+                    <label for="bgid2"><img id="bg2" src="5-download.jpg" width="100px"alt=""></label>
+                    <input type="radio" name="bgimg" id="bgid2">
+                </div>
+
+                <div class="radio1">
+                    <label for="bgid3"><img id="bg3" src="6-images.jpg" width="100px"alt=""></label>
+                    <input type="radio" name="bgimg" id="bgid3">
+                </div>
+                
+            </div>
+
+            <div class="btns">
+                <button id="delid">Delete</button>
+                <button id="saveid">Save</button>
+            </div>
+
+
+        </form>
+    </div>
+
+    <div class="container2">
+        <div class="data">
+            <h2>Cookie data</h2>
+            Name : <h4 id="cookie1"></h4><br>
+            Email :<h4 id="cookie2"></h4><br>
+            Mobile :<h4 id="cookie3"></h4><br>
+        </div>
+
+        <div class="data">
+            <h2>Session data</h2>
+            Name :<h4 id="ss1"></h4><br>
+            Email :<h4 id="ss2"></h4><br>
+            Mobile :<h4 id="ss3"></h4><br>
+        </div>
+
+        <div class="data">
+            <h2>Local storage data</h2>
+            Name :<h4 id="ls1"></h4>
+            Email :<h4 id="ls2"></h4>
+            Mobile :<h4 id="ls3"></h4>
+        </div>
+    </div>
+
+    <!------script code ------------------------>
+    <script>
+
+        function myfunction(){
+            let user = getCookie("Mydetails");
+            if (user != "") 
+            {
+                console.log(user)
+                displaydata();
+            } 
+            else
+            {   
+                console.log(user)
+            }
+        }
+
+
+        ///////////// display cookies function ///////////////////////////
+        function displaydata(){
+            var carray = getCookie("Mydetails").split(",");
+
+            let c1 = carray[0];
+            let c2 = carray[1];
+            let c3 = carray[2];
+            let c4 = carray[3];
+            let c5 = carray[4];
+            
+            console.log(c1)
+            document.getElementById("hid").innerHTML = c1+"'s profile";
+            document.getElementById("headerid").style.backgroundColor = c4;
+            document.body.style.backgroundImage = "url('"+c5+"')";
+
+            document.getElementById("cookie1").innerHTML = c1;
+            document.getElementById("cookie2").innerHTML = c2;
+            document.getElementById("cookie3").innerHTML = c3;
+            console.log(c3);
+
+            getsession();
+
+            getlocal();
+
+        }
+
+        ///////////////////   get cookies  ////////////////////////////////////////
+        function getCookie(cName) {
+            const name = cName + "=";
+            const cDecoded = decodeURIComponent(document.cookie); //to be careful
+            if(cDecoded !="")
+            {
+                const cArr = cDecoded.split('; ');
+                let res;
+                cArr.forEach(val => {
+                    if (val.indexOf(name) === 0) res = val.substring(name.length);
+                })
+                return res
+            }
+            else {
+                return "";
+            }
+            
+        }
+
+
+        //////////////////   get session data  ////////////////////////////////////
+        function getsession(){
+            let SSName = sessionStorage.getItem("myname");
+            let SSemail = sessionStorage.getItem("myemail");
+            let SSmobile = sessionStorage.getItem("mymobile");
+
+            document.getElementById("ss1").innerHTML = SSName
+            document.getElementById("ss2").innerHTML = SSemail
+            document.getElementById("ss3").innerHTML = SSmobile
+        }
+
+        //////////////////   get local storage data  ////////////////////////////////////
+        function getlocal(){
+            let LSName = localStorage.getItem("myname");
+            let LSemail = localStorage.getItem("myemail");
+            let LSmobile = localStorage.getItem("mymobile");
+
+            document.getElementById("ls1").innerHTML = LSName
+            document.getElementById("ls2").innerHTML = LSemail
+            document.getElementById("ls3").innerHTML = LSmobile
+        }
+
+
+
+        ////////////////////// variables and event listeners  ///////////////
+        document.getElementById("delid").addEventListener("click",deletecookies)
+        document.getElementById("delid").addEventListener("click",delsession)
+        document.getElementById("delid").addEventListener("click",dellocal)
+
+        document.getElementById("saveid").addEventListener("click",savefun)
+        let name = document.getElementById("nameid");
+        let email = document.getElementById("emailid");
+        let mobile = document.getElementById("mobileid");
+        let color = document.getElementById("colorid");
+
+        let img1 = document.getElementById("bgid1");
+        let img2 = document.getElementById("bgid2");
+        let img3 = document.getElementById("bgid3");
+        let imgpath = "";
+
+        
+
+        function savefun(){
+            if(name.value=="" || email.value=="" || mobile.value=="" || !validradio() )
+            {   
+                alert("No field should be left empty!");
+                event.preventDefault();
+            }
+            else{
+                n1 = name.value;
+                n2 = email.value;
+                n3 = mobile.value;
+                n4 = color.value;
+                n5 = imgpath;
+
+                setCookie(n1,n2,n3,n4,n5);
+
+                setsession(n1,n2,n3);
+
+                setlocal(n1,n2,n3);
+
+                alert("submitted successfully");
+                console.log(getCookie("Mydetails"));
+                event.preventDefault();
+            }
+              
+        }
+
+        function validradio(){
+            if(img1.checked){
+                imgpath = "4-Essentia.jpg";
+                return true;
+            }
+            else if(img2.checked){
+                imgpath = "5-download.jpg";
+                return true;
+            }
+            else if(img3.checked){
+                imgpath = "6-images.jpg";
+                return true;
+            }
+            else{
+                imgpath = "";
+                return false;
+            }
+        }
+
+
+        //////////////  CREATING COOKIES  ////////////////////////////////////////
+        function setCookie(name, email, mobile, color, imgpath) {
+            console.log(imgpath)
+            //document.cookie = "myname=" + name+","+"myemail="+email+","+"mymobile="+mobile+","+"mycolor="+color+","+"myimg="+imgpath; 
+            document.cookie = "Mydetails="+ name+","+email+","+mobile+","+color+","+imgpath;
+
+            const d = new Date();
+            d.setTime(d.getTime() + (365 * 24 * 60 * 60 * 1000));
+            let expires = "expires="+d.toUTCString();
+            document.cookie +=  ";" + expires;
+            console.log(document.cookie);
+        }
+
+        /////////////////  Delete cookies  ///////////////////////////////////////
+        function deletecookies(){
+
+            var user = getCookie("Mydetails");
+            if (user != "") 
+            {
+                const d = new Date();
+                d.setTime(d.getTime() + (-365 * 24 * 60 * 60 * 1000));
+                let expires = "expires="+d.toUTCString();
+                document.cookie +=  ";" + expires;
+                console.log(document.cookie);
+            } 
+            else
+            {   
+                alert("No cookies to delete!")
+            } 
+        }
+
+        ///////////////// creating session data  /////////////////////////////////
+       function setsession(name, email, mobile){
+            sessionStorage.setItem("myname", name);
+            sessionStorage.setItem("myemail", email);
+            sessionStorage.setItem("mymobile", mobile);
+       }
+
+       function setlocal(name, email, mobile){
+            localStorage.setItem("myname", name);
+            localStorage.setItem("myemail", email);
+            localStorage.setItem("mymobile", mobile);
+       }
+       
+       ///////////////// delteing session and local storage data  /////////////////////////////////
+       function delsession(name, email, mobile){
+            sessionStorage.removeItem("myname", name);
+            sessionStorage.removeItem("myemail", email);
+            sessionStorage.removeItem("mymobile", mobile);
+       }
+
+       function dellocal(name, email, mobile){
+            localStorage.removeItem("myname", name);
+            localStorage.removeItem("myemail", email);
+            localStorage.removeItem("mymobile", mobile);
+       }
+
+    </script>
+</body>
+</html>
