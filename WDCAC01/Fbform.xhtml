@@ -1,0 +1,156 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/css/bootstrap4-toggle.min.css" rel="stylesheet"/>
+    <script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/js/bootstrap4-toggle.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" />
+    <link rel="stylesheet" href="Ulog.css" />
+    <title>FEEDBACK FORM</title>
+</head>
+
+<body>
+    <div class="container-fluid h-custom mt-3 mb-5">
+
+        <div class="flex-column d-flex justify-content-center align-items-center h-100">
+            <img src="./christlogo.jpg" class="img-fluid mb-5" alt="Logo" id="christLogo" />
+            <h1>FEEDBACK FORM</h1>
+
+            <form class=" border border-info rounded-lg p-5 mw-100 custom forReset">
+                <!-- name input -->
+                <div class="form-outline mb-2">
+                    <label class="form-label" for="fname">NAME</label>
+                    <input type="name" id="fname" class="form-control form-control-lg" placeholder="Enter your name" />
+                    <span class="er_or"></span>
+
+                    </div>
+                <!-- address input -->
+                <label class="form-label" for="faddr">ADDRESS</label>
+                <div class="form-outline mb-2">
+                    <input type="text" id="faddr" class="form-control form-control-lg"
+                        placeholder="Enter your Address" />
+                </div>
+
+                <!-- Email input -->
+                <div class="form-outline mb-2">
+                    <label class="form-label" for="femail">EMAIL ADDRESS</label>
+                    <input type="email" id="femail" class="form-control form-control-lg"
+                        placeholder="Enter your email address" />
+                    <span class="er_or"></span>
+                </div>
+
+
+
+                <p class="mt-5">What do you like the most about the college?</p>
+              
+                <div class="divider d-flex align-items-center mb-3">
+                </div>
+
+            
+                <div class="form-check">
+                    <input type="checkbox" id="ch_std" class="form-check-input" />
+                    <label class="form-check-label" for="ch_std">Student life</label>
+                </div>
+                
+                <div class="form-check">
+                    <input type="checkbox" id="ch_loc" class="form-check-input" />
+                    <label class="form-check-label" for="ch_loc">Locations</label>
+                </div>
+
+                <div class="form-check">
+                    <input type="checkbox" id="ch_camp" class="form-check-input" />
+                    <label class="form-check-label" for="ch_camp">Campus Activities</label>
+                </div>
+   
+                <div class="form-check">
+                    <input type="checkbox" id="ch_atmos" class="form-check-input" />
+                    <label class="form-check-label" for="ch_atmos">Atmosphere</label>
+                </div>
+                
+                <div class="form-check">
+                    <input type="checkbox" id="ch_drm" class="form-check-input" />
+                    <label class="form-check-label" for="ch_drm">Hostel room</label>
+                </div>
+             
+                <div class="form-check">
+                    <input type="checkbox" id="ch_spt" class="form-check-input" />
+                    <label class="form-check-label" for="ch_spt">Sports</label>
+                </div>
+
+
+
+                <p class="mt-5">How did you become interested in university?</p>
+                
+                <div class="divider d-flex align-items-center mb-3">
+                </div>
+
+                
+                <div class="form-check">
+                    <input type="radio" id="rad_frd" class="form-check-input" value="friends" name="interest"/>
+                    <label class="form-check-label" for="rad_frd">Friends/Relatives</label>
+                </div>
+                <div class="form-check">
+                    <input type="radio" id="rad_tele" class="form-check-input" value="television" name="interest"/>
+                    <label class="form-check-label" for="rad_tele">News/Television</label>
+                </div>
+
+                <div class="form-check">
+                    <input type="radio" id="rad_int" class="form-check-input" value="television" name="interest"/>
+                    <label class="form-check-label" for="rad_int">Internet/Pamphelets</label>
+                </div>
+
+                <div class="form-check">
+                    <input type="radio" id="rad_oth" class="form-check-input" value="television" name="interest"/>
+                    <label class="form-check-label" for="rad_oth">Others</label>
+                </div>
+             
+                
+                    <label class="form-check-label mt-4" for="comt">Comments</label>
+                    <textarea class="form-control " aria-label="With textarea" id="comt"></textarea>
+                    
+                <div class="container-fluid d-flex flex-row justify-content-between align-items-center border-infos">
+
+                    <div class="container-fluid text-center text-lg-start mt-4 pt-2">
+                        <button
+                          type="submit"
+                          class="btn btn-primary btn-lg"
+                          style="padding-left: 2.5rem; padding-right: 2.5rem"
+                          onclick="valAll()"
+                        >
+                          SUBMIT
+                        </button>
+
+
+                    </div>
+                        <div class="container-fluid text-center text-lg-start mt-4 pt-2 ">
+                            <button
+                              type="reset"
+                              class="btn btn-primary btn-lg"
+                              style="padding-left: 2.5rem; padding-right: 2.5rem"
+                              onclick="resetme()"
+                            >
+                              RESET
+                            </button>
+                        </div>
+                </div>
+            </form>
+        </div>
+
+        
+
+
+    </div>
+<script src="./Fbval.js">
+
+</script>
+</body>
+
+</html>
