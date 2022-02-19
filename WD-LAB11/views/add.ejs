@@ -1,0 +1,77 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADD</title>
+    <style>
+        nav{
+            display: grid;
+            grid-template-columns:repeat(6,1fr);
+        }
+        a{
+            text-decoration: none;
+            background-color: rgb(54, 165, 209);
+            padding: 1.2rem;
+            font-size: 1.4rem;
+            text-align: center;
+            color: black;
+            font-family: monospace
+        }
+
+        a:hover{
+            background-color: rgb(0, 128, 117);
+            color: white;
+        }
+
+        .active{
+            background-color: rgb(162, 11, 221);
+            color: white;
+        }
+    </style>
+    
+</head>
+<body>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/add" class="active">Add</a>
+        <a href="">Update</a>
+        <a href="">Delete</a>
+        <a href="/display"  >display</a>
+    </nav>
+
+    <form action="/add" method="post">
+        <div class="input-control">
+            idid<input type="text" name="idid" id="idid">
+        </div>
+
+        <div class="input-control">
+            S_Name<input type="text" name="lid" id="lid">
+        </div>
+
+        <div class="input-control">
+            Username<input type="text" name="fid" id="fid">
+        </div>
+
+        <div class="input-control">
+            Password<input type="text" name="addid" id="addid">
+        </div>
+
+        <div class="input-control">
+            Email<input type="text" name="add2id" id="add2id">
+        </div>
+
+        <div class="input-control">
+            Phone_no<input type="text" name="add3id" id="add3id">
+        </div>
+
+        <div class="input-control">
+            Company Name<input type="text" name="add4id" id="add4id">
+        </div>
+
+        <button type="submit">Submit</button>
+
+    </form>
+    
+</body>
+</html>

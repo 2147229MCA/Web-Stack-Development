@@ -1,0 +1,84 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LUXUS AUCTIONS </title>
+
+    <style>
+        body{
+            background: #dc7836;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to top, #e5c05b, #dc3644);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to top, #e5875b, #dc3636); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+        }
+    </style>
+</head>
+<body>
+    <h1>LUXUS AUCTIONS CAR REGISTRATION SERVICE</h1>
+
+    <form id="customerform" action="/" method="post">
+        <div class="input-control">
+            <label for="vid">ENTER SET VEHICLE ID     </label>
+            <input id="vid" name="vid" type="text"placeholder="34" onkeypress="return test(event)">
+            
+        </div>
+
+
+
+        <div class="input-control">
+            <label for="regid">REGISTER NUMBER</label>
+            <input id="regid" name ="regid" type="text" placeholder="Eg:LD04ZI6777" onkeypress="return testalpha(event)">
+            <div id="error2" class="error"></div>
+        </div>
+
+        <div class="input-control">
+            <label for="carid">CAR BRAND</label>
+            <input id="carid" name ="carid" type="text" placeholder="TOYOTA/AUDI">
+            <div id="error3" class="error"></div>
+        </div>
+
+        <div class="input-control">
+            <label for="modelid">MODEL</label>
+            <input id="modelid" name ="modelid" type="text" placeholder="V9">
+            <div id="error4" class="error"></div>
+        </div>
+
+        <div class="input-control">
+            <label for="typeid">TYPE</label>
+            <input id="typeid" name="typeid" type="text" placeholder="ALL TERRAIN">
+            <div id="error5" class="error"></div>
+        </div>
+
+        <div class="input-control">
+            <label for="fuelid">FUELESAGE TYPE</label>
+            <input id="fuelid" name="fuelid" type="text" placeholder="PETROL">
+            <div id="error6" class="error"></div>
+        </div>
+
+        <div class="input-control">
+            <label for="yearid">PURCHASE YEAR</label>
+            <input id="yearid" name="yearid" type="text" placeholder="2000-07-08">
+            <div id="error6" class="error"></div>
+        </div>
+
+        <div class="input-control">
+            <label for="pastid">ANY PAST SERVICES?</label>
+            <input id="pastid" name="pastid" type="text" placeholder="1">
+            <div id="error6" class="error"></div>
+        </div>
+
+
+        <div class="btns">
+            <button id="clear" type="clear">
+                CLEAR
+            </button>
+
+            <button id="submit">
+                SUBMIT
+            </button>
+
+        </div>
+    </form>
+</body>
+</html>
