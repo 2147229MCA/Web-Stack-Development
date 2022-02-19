@@ -1,0 +1,34 @@
+[{    
+  "image":"https://2147229mca.github.io/spajson/img1.jpg",    
+  "Brand":"abc",    
+  "model":"alto",
+  "year":"2007",    
+  "price": 200000,
+  "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae praesentium perferendis aut. Illo sit, et sunt corporis nobis odio dolore eum minima sequi reprehenderit inventore necessitatibus non veniam voluptatum modi."    
+},
+{    
+  "image":"https://2147229mca.github.io/spajson/img2.jpg",    
+  "Brand":"bcd",    
+  "model":"xyz",
+  "year":"2004",   
+  "price": 1000000 ,
+  "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae praesentium perferendis aut. Illo sit, et sunt corporis nobis odio dolore eum minima sequi reprehenderit inventore necessitatibus non veniam voluptatum modi."    
+},
+{    
+  "image":"https://2147229mca.github.io/spajson/img3.jpg",    
+  "Brand":"cde",    
+  "model":"swift",
+  "year":"2008", 
+  "price": 400000 ,   
+  "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae praesentium perferendis aut. Illo sit, et sunt corporis nobis odio dolore eum minima sequi reprehenderit inventore necessitatibus non veniam voluptatum modi."    
+},
+{    
+  "image":"https://2147229mca.github.io/spajson/img4.jpg",    
+  "Brand":"def",    
+  "model":"zxy",
+  "year":"2008", 
+  "price": 600000 ,   
+  "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae praesentium perferendis aut. Illo sit, et sunt corporis nobis odio dolore eum minima sequi reprehenderit inventore necessitatibus non veniam voluptatum modi."    
+}
+
+]

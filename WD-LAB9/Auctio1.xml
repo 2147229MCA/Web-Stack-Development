@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="Auctio1.xsl"?>
+<Auctio1 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Auctio1.xsd">
+    <Seller>
+      <Name>Purohit Sharma</Name>
+      <Phonenum>9876545590</Phonenum>
+      <Emailid>prs@email.com</Emailid>
+      <Username>25PRohit</Username>
+      <No_of_Items>3</No_of_Items>
+      <Seller_ID>S12</Seller_ID>
+      <SelType>Corporate</SelType>
+   </Seller>
+
+
+   <Seller>
+      <Name>Tina Cortez</Name>
+      <Phonenum>9676541230</Phonenum>
+      <Emailid>tc@email.com</Emailid>
+      <Username>TinaTC</Username>
+      <No_of_Items>2</No_of_Items>
+      <Seller_ID>S04</Seller_ID>
+      <SelType>Independent</SelType>
+   </Seller>
+   
+
+   <Seller>
+      <Name>Souma Priti</Name>
+      <Phonenum>8876541230</Phonenum>
+      <Emailid>sp@email.com</Emailid>
+      <Username>Souma1997</Username>
+      <No_of_Items>1</No_of_Items>
+      <Seller_ID>S06</Seller_ID>
+      <SelType>Corporate</SelType>
+   </Seller>
+   
+
+    <Seller>
+      <Name>Higrav Kolnov</Name>
+      <Phonenum>8865412306</Phonenum>
+      <Emailid>hk@email.com</Emailid>
+      <Username>Kolnovh9</Username>
+      <No_of_Items>4</No_of_Items>
+      <Seller_ID>S07</Seller_ID>
+      <SelType>Corporate</SelType>
+   </Seller>
+   
+   
+
+   <Seller>
+      <Name>Ash K Jones</Name>
+      <Phonenum>9477264128</Phonenum>
+      <Emailid>ashkj@gmail.com</Emailid>
+      <Username>Kashj33</Username>
+      <No_of_Items>0</No_of_Items>
+      <Seller_ID>S05</Seller_ID>
+      <SelType>Corporate</SelType>
+   </Seller>
+   
+
+
+   <Seller>
+      <Name>Karthik Arya</Name>
+      <Phonenum>9467890568</Phonenum>
+      <Emailid>karya@gmail.com</Emailid>
+      <Username>AK23</Username>
+      <No_of_Items>3</No_of_Items>
+      <Seller_ID>S23</Seller_ID>
+      <SelType>Independent</SelType>
+   </Seller>
+  
+
+   <Seller>
+      <Name>Aeron Roy</Name>
+      <Phonenum>9477267844</Phonenum>
+      <Emailid>royA@gmail.com</Emailid>
+      <Username>AeronRoy22</Username>
+      <No_of_Items>1</No_of_Items>
+      <Seller_ID>S01</Seller_ID>
+      <SelType>Independent</SelType>
+   </Seller>
+   
+   <Seller>
+      <Name>Sashi Verma</Name>
+      <Phonenum>9475423128</Phonenum>
+      <Emailid>sashV55@gmail.com</Emailid>
+      <Username>VermaSash550</Username>
+      <No_of_Items>5</No_of_Items>
+      <Seller_ID>S08</Seller_ID>
+      <SelType>Independent</SelType>
+   </Seller>
+   <Item>
+      <I_name>Lexit Genos SS</I_name>
+      <I_id>34</I_id>
+      <Sel_ID>S12</Sel_ID>
+      <Brand>Lexit</Brand>
+      <Min_Price>4500000</Min_Price>
+      <Min_inc>50000</Min_inc>
+      <Category>S-class RD Car</Category>
+      <Auction_no>A11</Auction_no>
+   </Item>
+   <Item>
+      <I_name>Varcaz VZ</I_name>
+      <I_id>12</I_id>
+      <Sel_ID>S08</Sel_ID>
+      <Brand>Varcaz</Brand>
+      <Min_Price>3750000</Min_Price>
+      <Min_inc>50000</Min_inc>
+      <Category>A-class Custom Car</Category>
+      <Auction_no>A12</Auction_no>
+   </Item>
+   <Item>
+      <I_name>Benz Julius700</I_name>
+      <I_id>04</I_id>
+      <Sel_ID>S08</Sel_ID>
+      <Brand>Benz</Brand>
+      <Min_Price>6750000</Min_Price>
+      <Min_inc>75000</Min_inc>
+      <Category>S-class Custom Car</Category>
+      <Auction_no>A12</Auction_no>
+   </Item>
+   <Item>
+      <I_name>Ferrarri LX55</I_name>
+      <I_id>07</I_id>
+      <Sel_ID>S23</Sel_ID>
+      <Brand>Ferrarri</Brand>
+      <Min_Price>5230000</Min_Price>
+      <Min_inc>55000</Min_inc>
+      <Category>S-class Hybrid Car</Category>
+      <Auction_no>A14</Auction_no>
+   </Item>
+   <Item>
+      <I_name>Skoda Octavius87</I_name>
+      <I_id>32</I_id>
+      <Sel_ID>S06</Sel_ID>
+      <Brand>Skoda</Brand>
+      <Min_Price>3440000</Min_Price>
+      <Min_inc>42000</Min_inc>
+      <Category>B-class Eco Car</Category>
+      <Auction_no>A14</Auction_no>
+   </Item>
+   <Item>
+      <I_name>Tesla Archon01</I_name>
+      <I_id>03</I_id>
+      <Sel_ID>S08</Sel_ID>
+      <Brand>Tesla</Brand>
+      <Min_Price>9890000</Min_Price>
+      <Min_inc>90000</Min_inc>
+      <Category>X-class RD Car</Category>
+      <Auction_no>A11</Auction_no>
+   </Item>
+   <Auction>
+      <Auction_no>A11</Auction_no>
+      <Date>2021-12-01</Date>
+      <Duration>7:00 PM to 10:00 PM</Duration>
+      <Auc_Categ>Special</Auc_Categ>
+   </Auction>
+   <Auction>
+      <Auction_no>A12</Auction_no>
+      <Date>2022-01-15</Date>
+      <Duration>6:00 PM to 10:00PM</Duration>
+      <Auc_Categ>Premium</Auc_Categ>
+   </Auction>
+   <Auction>
+      <Auction_no>A13</Auction_no>
+      <Date>2022-02-17</Date>
+      <Duration>6:00 PM to 10:00PM</Duration>
+      <Auc_Categ>Deluxe</Auc_Categ>
+   </Auction>
+   <Auction>
+      <Auction_no>A14</Auction_no>
+      <Date>2022-02-21</Date>
+      <Duration>7:00 PM to 9:00 PM</Duration>
+      <Auc_Categ>Special X</Auc_Categ>
+   </Auction>
+   <Auction>
+      <Auction_no>A15</Auction_no>
+      <Date>2022-02-26</Date>
+      <Duration>6:00 PM to 10:00PM</Duration>
+      <Auc_Categ>Deluxe</Auc_Categ>
+   </Auction>
+   <Buyer>
+      <Name>Prakash Shastra</Name>
+      <Phonenum>9876545590</Phonenum>
+      <Emailid>prs@email.com</Emailid>
+      <Username>PRShastra34</Username>
+      <B_id>B27</B_id>
+   </Buyer>
+   <Buyer>
+      <Name>John Dooge</Name>
+      <Phonenum>8362834128</Phonenum>
+      <Emailid>JDg@email.com</Emailid>
+      <Username>JDooge12</Username>
+      <B_id>B22</B_id>
+   </Buyer>
+   <Buyer>
+      <Name>Mia Malhotra</Name>
+      <Phonenum>9548749990</Phonenum>
+      <Emailid>miamal@email.com</Emailid>
+      <Username>MM44</Username>
+      <B_id>B14</B_id>
+   </Buyer>
+   <Buyer>
+      <Name>Dia Vikone</Name>
+      <Phonenum>9832643328</Phonenum>
+      <Emailid>Dvk@email.com</Emailid>
+      <Username>VikoneD29</Username>
+      <B_id>B19</B_id>
+   </Buyer>
+   <Buyer>
+      <Name>Max Magellan</Name>
+      <Phonenum>9435727590</Phonenum>
+      <Emailid>mxmgln@email.com</Emailid>
+      <Username>Magellanmx853</Username>
+      <B_id>B05</B_id>
+   </Buyer>
+
+</Auctio1>
